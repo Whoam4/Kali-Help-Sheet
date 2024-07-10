@@ -220,7 +220,7 @@ Gobuster is an open source directory and subdomain enumeration tool used to disc
 | use auxiliary/scanner/mysql/mysql_version | Metasploit MySQL Version Scanner        |
 ---------------------------------------------------------------------------------
 | use auxiliary/scanner/oracle/oracle_login | Metasploit Oracle Login Module          |
----------------------------------------------------------------------------------
+
 
 
 
