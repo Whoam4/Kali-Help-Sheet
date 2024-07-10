@@ -198,8 +198,8 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 | " " (quotes)  | Searches for exact phrases.                                     | `"information security policy"`  | Searches for documents containing the exact phrase "information security policy". |
 | - (minus sign) | Excludes terms from search results.                             | `site:news.com -inurl:sports`   | Searches for news articles on news.com, excluding sports-related content. |
 
-### Gobuster Fuzzing
-
+### 💀​ Gobuster Fuzzing
+Gobuster is an open source directory and subdomain enumeration tool used to discover hidden files and directories on a website.
 | Command                                           | Description                                                         |
 |---------------------------------------------------|---------------------------------------------------------------------|
 | `gobuster dir -u http://10.10.10.121/ -w /usr/share/dirb/wordlists/common.txt` | Fuzzing hidden directories on an IP.                                |
