@@ -73,13 +73,15 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 
 `hydra -L username.list -P password.list ssh://10.129.202.136 `
 
-Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
-
-Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2024-03-08 09:41:16
-
 ## Bruteforce de RDP
 
 `hydra -L username.list -P password.list rdp://10.129.202.136`
  
+# Compiling Exploits
+
+| Header Files                                         | OS      |
+|------------------------------------------------------|---------|
+| `process.h, string.h, winbase.h, windows.h, winsock2.h` | Windows |
+| `arpa/inet.h, fcntl.h, netdb.h, netinet/in.h, sys/socket.h, sys/types.h, unistd.h` | Linux   |
 
 
