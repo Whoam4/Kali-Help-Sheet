@@ -209,7 +209,6 @@ Gobuster is an open source directory and subdomain enumeration tool used to disc
 | `gobuster dir -u example.com -w /usr/share/dirb/wordlists/directory-list-2.3-medium.txt -f -e` | Returning only requests with positive status codes on example.com.  |
 
 🔍 Auxilary Metasploit Modules
----------------------------------------------------------------------------------
 | Command                                | Description                              |
 ---------------------------------------------------------------------------------
 | use auxiliary/scanner/http/dir_scanner  | Metasploit HTTP directory scanner         |
