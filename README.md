@@ -153,13 +153,12 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 
 # Auxilary Metasploit Modules 🔍
 
-| Command                                | Description                              |
-|--------------------------------------------------------------------------------|
-| `use auxiliary/scanner/http/dir_scanner`  | Metasploit HTTP directory scanner         |
-| `use auxiliary/scanner/http/jboss_vulnscan` | Metasploit JBOSS vulnerability scanner  |
-| `use auxiliary/scanner/mssql/mssql_login` | Metasploit MSSQL Credential Scanner       |
-| `use auxiliary/scanner/mysql/mysql_version` | Metasploit MySQL Version Scanner        |
-| `use auxiliary/scanner/oracle/oracle_login` | Metasploit Oracle Login Module          |
+| Nombre   | Edad | Ciudad     |
+|----------|------|------------|
+| Ana      | 25   | Madrid     |
+| Pedro    | 30   | Barcelona  |
+| Laura    | 28   | Valencia   |
+
 
 
 
