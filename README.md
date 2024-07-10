@@ -152,19 +152,14 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 | `sqlmap -o -u "http://meh/vuln-form" --forms -D database-name -T users --dump`                 | SQLMap dump and crack hashes for table users on database-name                                     |
 
 🔍 Auxilary Metasploit Modules
----------------------------------------------------------------------------------
 | Command                                | Description                              |
 ---------------------------------------------------------------------------------
 | use auxiliary/scanner/http/dir_scanner  | Metasploit HTTP directory scanner         |
----------------------------------------------------------------------------------
 | use auxiliary/scanner/http/jboss_vulnscan | Metasploit JBOSS vulnerability scanner  |
----------------------------------------------------------------------------------
 | use auxiliary/scanner/mssql/mssql_login | Metasploit MSSQL Credential Scanner       |
----------------------------------------------------------------------------------
 | use auxiliary/scanner/mysql/mysql_version | Metasploit MySQL Version Scanner        |
----------------------------------------------------------------------------------
 | use auxiliary/scanner/oracle/oracle_login | Metasploit Oracle Login Module          |
----------------------------------------------------------------------------------
+
 
 
 ### Meterpreter Cheat Sheet
