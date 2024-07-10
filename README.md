@@ -50,8 +50,12 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 
 # 🐍 Hydra
 
-#Bruteforce de contraseña con usuario que sabemos
+## Bruteforce de contraseña con usuario que sabemos
+
 `hydra -l <username> -P /usr/share/wordlists/rockyou.txt http://<IP_Address>`
+
+## Bruteforce de usuario y contraseña
+`hydra -L /usr/share/wordlists/users.txt -P /usr/share/wordlists/rockyou.txt http://<IP_Address>`
 
 ## Bruteforce de SSH
 
