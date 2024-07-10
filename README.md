@@ -1,6 +1,7 @@
-#Kali-Help-Sheet
 
-# TTY Shells
+
+# Kali Help Sheet for White Hats.
+
 ## Python TTY Shell Trick:
 `python -c 'import pty;pty.spawn("/bin/bash")'`
 
@@ -41,6 +42,24 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 | `nmap -v -p 445 –script=smb-check-vulns --script-args=unsafe=1 192.168.1.X` | Nmap script to scan for vulnerable SMB servers. |
 | `nmap localhost` | Displays all the ports that are currently in use. |
 | `ls /usr/share/nmap/scripts/* | grep ftp` | Search nmap scripts for keywords. |
+  
+| Command                     | Description                                            |
+|-----------------------------|--------------------------------------------------------|
+| nmap <host>                 | Simple host scan                                       |
+| nmap <start_ip>-<end_ip>    | Scanning IP address ranges                             |   
+| nmap -p <port_range> <host> | Scanning a range of ports                              |
+| nmap -p- <host>             | Scan all ports                                         |
+| nmap -p 1-1000 <host>       | Scanning of the 1000 most common ports                 |
+| nmap -sV <host>             | Scanning services and versions                         |
+| nmap -T5 -F <host>          | Quick scan without DNS resolution                      |
+| nmap -O <host>              | Scanning operating systems                             |
+| nmap --script vuln <host>   | Vulnerability script scannings                         |
+| nmap --script <script_name> <host> | Scanning for specific scripts                   |
+| nmap -sS <host>             | Stealth scanning (does not generate logs at destination)|
+| nmap -sU <host>             | UDP scanning                                           |
+| nmap -sn <network>          | Scanning live hosts on a network                       |
+| nmap -oX output.xml <host>  | Save results in XML format                             |
+
 
 # 👤 Username Enumeration
 
@@ -70,30 +89,30 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 
 # 🐍 Hydra
 
-# Guía rápida de Hydra
+# Hydra Quick Guide
 
-| Comando | Descripción |
+| Command | Description |
 |---------|-------------|
-| `hydra -h` | Menú de ayuda |
-| `hydra -C wordlist.txt SERVER_IP -s PORT http-get /` | Fuerza bruta de autenticación básica - Lista de palabras combinada |
-| `hydra -L wordlist.txt -P wordlist.txt -u -f SERVER_IP -s PORT http-get /` | Fuerza bruta de autenticación básica - Listas de palabras de usuario/contraseña |
-| `hydra -l admin -P wordlist.txt -f SERVER_IP -s PORT http-post-form "/login.php:username=^USER^&password=^PASS^:F=<form name='login'"` | Fuerza bruta de formulario de inicio de sesión - Usuario que sabemos + lista contraseñas |
-| `hydra -L bill.txt -P william.txt -u -f ssh://SERVER_IP:PORT -t 4` | SSH Brute Force - Listas de palabras de usuario/contraseña |
-| `hydra -l m.gates -P rockyou-10.txt ftp://127.0.0.1` | FTP Brute Force - Usuario que sabemos + lista contraseñas |
+| `hydra -h` | Help menu |
+| `hydra -C wordlist.txt SERVER_IP -s PORT http-get /` | Basic Authentication Brute Force - Combined Word List|
+| `hydra -L wordlist.txt -P wordlist.txt -u -f SERVER_IP -s PORT http-get /` | Basic Authentication Brute Force - User/Password Word Lists |
+| `hydra -l admin -P wordlist.txt -f SERVER_IP -s PORT http-post-form "/login.php:username=^USER^&password=^PASS^:F=<form name='login'"` | Login Form Brute Force - User We Know + Password List |
+| `hydra -L bill.txt -P william.txt -u -f ssh://SERVER_IP:PORT -t 4` | SSH Brute Force - User/Password Word Lists |
+| `hydra -l m.gates -P rockyou-10.txt ftp://127.0.0.1` | FTP Brute Force - User we know + password list|
 
 
-## Bruteforce de contraseña con usuario que sabemos
+## Bruteforce password with user we know
 
 `hydra -l <username> -P /usr/share/wordlists/rockyou.txt http://<IP_Address>`
 
-## Bruteforce de usuario y contraseña
+## Bruteforce username and password
 `hydra -L /usr/share/wordlists/users.txt -P /usr/share/wordlists/rockyou.txt http://<IP_Address>`
 
-## Bruteforce de SSH
+## SSH Bruteforce
 
 `hydra -L username.list -P password.list ssh://10.129.202.136 `
 
-## Bruteforce de RDP
+## Bruteforce RDP
 
 `hydra -L username.list -P password.list rdp://10.129.202.136`
  
@@ -153,5 +172,39 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 | record_mic             | Record microphone                                    |
 | enum_chrome            | Enumerate Chrome browser data                        |
 
+### Google Operators DORKS
 
+| Operator      | Operator Description                                           | Example                          | Example Description                                           |
+|---------------|----------------------------------------------------------------|----------------------------------|----------------------------------------------------------------|
+| site:         | Limits results to a specific website or domain.                 | `site:example.com`               | Finds all publicly accessible pages on example.com.            |
+| inurl:        | Finds pages with a specific term in the URL.                    | `inurl:login`                    | Searches for login pages on any website.                        |
+| filetype:     | Searches for files of a particular type.                        | `filetype:pdf`                   | Finds downloadable PDF documents.                              |
+| intitle:      | Searches for pages with a specific term in the title.           | `intitle:"confidential report"`  | Searches for documents titled "confidential report".           |
+| intext:       | Searches for a term within the body text of pages.              | `intext:"password reset"`        | Identifies web pages containing the term "password reset".     |
+| cache:        | Displays the cached version of a web page (if available).       | `cache:example.com`              | Views the cached version of example.com to see its past content.|
+| link:         | Finds pages linking to a specific web page.                     | `link:example.com`               | Identifies websites linking to example.com.                    |
+| related:      | Finds websites related to a specific web page.                  | `related:example.com`            | Discovers websites similar to example.com.                     |
+| info:         | Provides a summary of information about a web page.             | `info:example.com`               | Retrieves basic details about example.com, such as its title and description. |
+| define:       | Provides definitions for a word or phrase.                      | `define:phishing`                | Retrieves definitions of "phishing" from various sources.     |
+| numrange:     | Searches for numbers within a specific range.                   | `site:example.com numrange:1000-2000` | Searches for pages on example.com containing numbers between 1000 and 2000. |
+| allintext:    | Searches for pages containing all specified words in the body text. | `allintext:admin password reset` | Searches for pages containing both "admin" and "password reset" in the body text. |
+| allinurl:     | Searches for pages containing all specified words in the URL.   | `allinurl:admin panel`           | Searches for pages with "admin" and "panel" in the URL.        |
+| allintitle:   | Searches for pages containing all specified words in the title. | `allintitle:confidential report 2023` | Searches for pages with "confidential", "report", and "2023" in the title. |
+| AND           | Limits results to pages that contain all specified terms.       | `site:example.com AND (inurl:admin OR inurl:login)` | Finds admin or login pages specifically on example.com.        |
+| OR            | Expands results to include pages with any of the specified terms. | `"linux" OR "ubuntu" OR "debian"` | Searches for web pages mentioning Linux, Ubuntu, or Debian.   |
+| NOT           | Excludes results containing the specified term.                 | `site:bank.com NOT inurl:login`  | Searches pages on bank.com, excluding login pages.            |
+| * (wildcard)  | Represents any character or word.                               | `site:socialnetwork.com filetype:pdf user* manual` | Searches for user manuals (guide, manual) in PDF format on socialnetwork.com. |
+| .. (range search) | Finds results within a specific numerical range.              | `site:ecommerce.com "price" 100..500` | Searches for products priced between 100 and 500 on an ecommerce site. |
+| " " (quotes)  | Searches for exact phrases.                                     | `"information security policy"`  | Searches for documents containing the exact phrase "information security policy". |
+| - (minus sign) | Excludes terms from search results.                             | `site:news.com -inurl:sports`   | Searches for news articles on news.com, excluding sports-related content. |
+
+### Gobuster Fuzzing
+
+| Command                                           | Description                                                         |
+|---------------------------------------------------|---------------------------------------------------------------------|
+| `gobuster dir -u http://10.10.10.121/ -w /usr/share/dirb/wordlists/common.txt` | Fuzzing hidden directories on an IP.                                |
+| `gobuster dir -u example.com -w /usr/share/dirb/wordlists/directory-list-2.3-medium.txt` | Fuzzing hidden directories on example.com using a medium wordlist.  |
+| `gobuster vhost dir -u example.com -w /usr/share/dirb/wordlists/common.txt -t 50` | Fuzzing virtual hosts and directories on example.com with 50 threads. |
+| `gobuster dns -d example.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt` | Enumerating subdomains by adding a DNS server like 1.1.1.1 to /etc/resolv.conf. |
+| `gobuster dir -u example.com -w /usr/share/dirb/wordlists/directory-list-2.3-medium.txt -f -e` | Returning only requests with positive status codes on example.com.  |
 
