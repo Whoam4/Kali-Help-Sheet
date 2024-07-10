@@ -2,6 +2,7 @@
 
 # **Kali Help Sheet for White Hats.**
 
+
 ## ​​​🐍​ Python TTY Shell Trick:
 `python -c 'import pty;pty.spawn("/bin/bash")'`
 
