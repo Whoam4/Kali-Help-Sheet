@@ -213,12 +213,12 @@ Gobuster is an open source directory and subdomain enumeration tool used to disc
 
 ​​🔥 ​Exploit Research
 --------------------------------------------------------------------------------
-| Command                                                | Description         |
+| Command                                                                  | Description         |
 --------------------------------------------------------------------------------
-| `searchsploit windows 2003	grep -i local`              | Search exploits for Windows 2003 and filter for local exploits. |
-| site:exploit-db.com exploit kernel <= 3                 | Google search for kernel exploits on exploit-db.com with version <= 3. |
-| grep -R "W7" /usr/share/metasploit-framework/modules/exploit/windows/* | Search Metasploit modules for Windows 7 exploits. |
-| msfconsole -q -x "search name:windows type:exploit"     | Search Metasploit for Windows exploits using a quiet session. |
+| `searchsploit windows 2003	grep -i local`                              | Search exploits for Windows 2003 and filter for local exploits. |
+| site:exploit-db.com exploit kernel <= 3                                 | Google search for kernel exploits on exploit-db.com with version <= 3. |
+| grep -R "W7" /usr/share/metasploit-framework/modules/exploit/windows/*  | Search Metasploit modules for Windows 7 exploits. |
+| msfconsole -q -x "search name:windows type:exploit"                     | Search Metasploit for Windows exploits using a quiet session. |
 --------------------------------------------------------------------------------
 
 
