@@ -153,12 +153,12 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 
 # Auxilary Metasploit Modules 🔍
 
-| Nombre   | Edad | Ciudad     |
-|----------|------|------------|
-| Ana      | 25   | Madrid     |
-| Pedro    | 30   | Barcelona  |
-| Laura    | 28   | Valencia   |
-
+| Command                                               | Description                                                   |
+|-------------------------------------------------------|---------------------------------------------------------------|
+| `searchsploit windows 2003 grep -i local`              | Search exploits for Windows 2003 and filter for local exploits.|
+| `site:exploit-db.com exploit kernel <= 3  `              | Google search for kernel exploits on exploit-db.com with version <= 3.|
+|` grep -R "W7" /usr/share/metasploit-framework/modules/exploit/windows/*` | Search Metasploit modules for Windows 7 exploits. |
+|` msfconsole -q -x "search name:windows type:exploit" `   | Search Metasploit for Windows exploits using a quiet session.  |
 
 
 
