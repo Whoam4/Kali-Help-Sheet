@@ -88,9 +88,9 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 | `wget https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt` | Download a popular wordlist from GitHub |
 
 # ​​​​🔑​ Hydra
+Hydra is an open source brute force tool used to test the security of passwords on a wide variety of network services, such as FTP, SSH, Telnet, HTTP...
 
 # Hydra Quick Guide
-
 | Command | Description |
 |---------|-------------|
 | `hydra -h` | Help menu |
