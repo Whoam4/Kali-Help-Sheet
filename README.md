@@ -162,7 +162,7 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 
 
 
-### Meterpreter Cheat Sheet
+## Meterpreter Cheat Sheet ​❗​
 
 | Command                | Description                                          |
 |------------------------|------------------------------------------------------|
@@ -183,7 +183,7 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 | record_mic             | Record microphone                                    |
 | enum_chrome            | Enumerate Chrome browser data                        |
 
-### Google Operators DORKS
+## Google Operators DORKS ​​​​​🌐​
 
 | Operator      | Operator Description                                           | Example                          | Example Description                                           |
 |---------------|----------------------------------------------------------------|----------------------------------|----------------------------------------------------------------|
