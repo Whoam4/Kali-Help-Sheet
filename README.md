@@ -151,6 +151,22 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 | `sqlmap -o -u "http://meh.com/form/" --forms`                                                 | SQLMap check form for injection                                                                  |
 | `sqlmap -o -u "http://meh/vuln-form" --forms -D database-name -T users --dump`                 | SQLMap dump and crack hashes for table users on database-name                                     |
 
+🔍 Auxilary Metasploit Modules
+---------------------------------------------------------------------------------
+| Command                                | Description                              |
+---------------------------------------------------------------------------------
+| use auxiliary/scanner/http/dir_scanner  | Metasploit HTTP directory scanner         |
+---------------------------------------------------------------------------------
+| use auxiliary/scanner/http/jboss_vulnscan | Metasploit JBOSS vulnerability scanner  |
+---------------------------------------------------------------------------------
+| use auxiliary/scanner/mssql/mssql_login | Metasploit MSSQL Credential Scanner       |
+---------------------------------------------------------------------------------
+| use auxiliary/scanner/mysql/mysql_version | Metasploit MySQL Version Scanner        |
+---------------------------------------------------------------------------------
+| use auxiliary/scanner/oracle/oracle_login | Metasploit Oracle Login Module          |
+---------------------------------------------------------------------------------
+
+
 ### Meterpreter Cheat Sheet
 
 | Command                | Description                                          |
@@ -208,18 +224,7 @@ Gobuster is an open source directory and subdomain enumeration tool used to disc
 | `gobuster dns -d example.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt` | Enumerating subdomains by adding a DNS server like 1.1.1.1 to /etc/resolv.conf. |
 | `gobuster dir -u example.com -w /usr/share/dirb/wordlists/directory-list-2.3-medium.txt -f -e` | Returning only requests with positive status codes on example.com.  |
 
-###🔍 Auxilary Metasploit Modules
-| Command                                | Description                              |
----------------------------------------------------------------------------------
-| use auxiliary/scanner/http/dir_scanner  | Metasploit HTTP directory scanner         |
----------------------------------------------------------------------------------
-| use auxiliary/scanner/http/jboss_vulnscan | Metasploit JBOSS vulnerability scanner  |
----------------------------------------------------------------------------------
-| use auxiliary/scanner/mssql/mssql_login | Metasploit MSSQL Credential Scanner       |
----------------------------------------------------------------------------------
-| use auxiliary/scanner/mysql/mysql_version | Metasploit MySQL Version Scanner        |
----------------------------------------------------------------------------------
-| use auxiliary/scanner/oracle/oracle_login | Metasploit Oracle Login Module          |
+
 
 
 
