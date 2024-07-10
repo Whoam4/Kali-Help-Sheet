@@ -5,18 +5,25 @@
 `python -c 'import pty;pty.spawn("/bin/bash")'`
 
 `python3 -c 'import pty;pty.spawn("/bin/bash")'`
+
 #Spawn Interactive sh shell
 `/bin/sh -i`
+
 #Spawn Perl TTY Shell
 `perl -e 'exec "/bin/sh";'`
+
 #Spawn Ruby TTY Shel
 `ruby -e 'exec "/bin/sh"'`
+
 #Spawn Lua TTY Shell
 `lua -e 'os.execute("/bin/sh")'`
+
 #Spawn TTY Shell from Vi
 `:!bash`
+
 #Spawn TTY Shell from NMAP
 `!sh`
+
 # 🕵️ Recon and Enumeration
 
 ## 🌐 NMAP Commands
