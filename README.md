@@ -2,7 +2,7 @@
 
 # **Kali Help Sheet for White Hats.**
 
-## Python TTY Shell Trick:
+## ​​​🐍​ Python TTY Shell Trick:
 `python -c 'import pty;pty.spawn("/bin/bash")'`
 
 `python3 -c 'import pty;pty.spawn("/bin/bash")'`
@@ -87,7 +87,7 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 | `/usr/share/wordlists` | Kali word lists |
 | `wget https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt` | Download a popular wordlist from GitHub |
 
-# 🐍 Hydra
+# ​​​​🔑​ Hydra
 
 # Hydra Quick Guide
 
@@ -208,3 +208,11 @@ Gobuster is an open source directory and subdomain enumeration tool used to disc
 | `gobuster dns -d example.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt` | Enumerating subdomains by adding a DNS server like 1.1.1.1 to /etc/resolv.conf. |
 | `gobuster dir -u example.com -w /usr/share/dirb/wordlists/directory-list-2.3-medium.txt -f -e` | Returning only requests with positive status codes on example.com.  |
 
+​​🔥 ​Exploit Research
+-----------------
+Command                                                Description
+-------------------------------------------------------------------------
+`searchsploit windows 2003	grep -i local`              Search exploits for Windows 2003 and filter for local exploits.
+site:exploit-db.com exploit kernel <= 3                 Google search for kernel exploits on exploit-db.com with version <= 3.
+grep -R "W7" /usr/share/metasploit-framework/modules/exploit/windows/*  Search Metasploit modules for Windows 7 exploits.
+msfconsole -q -x "search name:windows type:exploit"     Search Metasploit for Windows exploits using a quiet session.
