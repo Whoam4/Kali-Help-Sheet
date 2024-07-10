@@ -209,17 +209,19 @@ Gobuster is an open source directory and subdomain enumeration tool used to disc
 | `gobuster dir -u example.com -w /usr/share/dirb/wordlists/directory-list-2.3-medium.txt -f -e` | Returning only requests with positive status codes on example.com.  |
 
 
-
-
 ​​🔥 ​Exploit Research
+
+Compiling Exploits
 --------------------------------------------------------------------------------
-| Command                                                                  | Description         |
+| Header Files                                      | OS     |
 --------------------------------------------------------------------------------
-| `searchsploit windows 2003	grep -i local`                              | Search exploits for Windows 2003 and filter for local exploits. |
-| site:exploit-db.com exploit kernel <= 3                                 | Google search for kernel exploits on exploit-db.com with version <= 3. |
-| grep -R "W7" /usr/share/metasploit-framework/modules/exploit/windows/*  | Search Metasploit modules for Windows 7 exploits. |
-| msfconsole -q -x "search name:windows type:exploit"                     | Search Metasploit for Windows exploits using a quiet session. |
+| process.h, string.h, winbase.h, windows.h,         | Windows |
+| winsock2.h                                         |         |
 --------------------------------------------------------------------------------
+| arpa/inet.h, fcntl.h, netdb.h, netinet/in.h,      | Linux   |
+| sys/sockt.h, sys/types.h, unistd.h                 |         |
+--------------------------------------------------------------------------------
+
 
 
 
