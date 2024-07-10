@@ -208,7 +208,7 @@ Gobuster is an open source directory and subdomain enumeration tool used to disc
 | `gobuster dns -d example.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt` | Enumerating subdomains by adding a DNS server like 1.1.1.1 to /etc/resolv.conf. |
 | `gobuster dir -u example.com -w /usr/share/dirb/wordlists/directory-list-2.3-medium.txt -f -e` | Returning only requests with positive status codes on example.com.  |
 
-🔍 Auxilary Metasploit Modules
+###🔍 Auxilary Metasploit Modules
 | Command                                | Description                              |
 ---------------------------------------------------------------------------------
 | use auxiliary/scanner/http/dir_scanner  | Metasploit HTTP directory scanner         |
