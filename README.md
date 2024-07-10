@@ -2,8 +2,21 @@
 
 # TTY Shells
 ## Python TTY Shell Trick
+`python -c 'import pty;pty.spawn("/bin/bash")'`
 
-
+`python3 -c 'import pty;pty.spawn("/bin/bash")'`
+#Spawn Interactive sh shell
+`/bin/sh -i`
+#Spawn Perl TTY Shell
+`perl -e 'exec "/bin/sh";'`
+#Spawn Ruby TTY Shel
+`ruby -e 'exec "/bin/sh"'`
+#Spawn Lua TTY Shell
+`lua -e 'os.execute("/bin/sh")'`
+#Spawn TTY Shell from Vi
+`:!bash`
+#Spawn TTY Shell from NMAP
+`!sh`
 # 🕵️ Recon and Enumeration
 
 ## 🌐 NMAP Commands
@@ -77,7 +90,7 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 
 `hydra -L username.list -P password.list rdp://10.129.202.136`
  
-# Compiling Exploits
+# 👨‍💻​ Compiling Exploits
 
 | Header Files                                         | OS      |
 |------------------------------------------------------|---------|
