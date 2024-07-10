@@ -42,7 +42,7 @@ Nmap (“Network Mapper”) is a free and open-source utility for network discov
 | `nmap -v -sU -sS -p- -A -T4 target` | As above but scans all TCP ports and UDP scan (takes even longer). |
 | `nmap -v -p 445 –script=smb-check-vulns --script-args=unsafe=1 192.168.1.X` | Nmap script to scan for vulnerable SMB servers. |
 | `nmap localhost` | Displays all the ports that are currently in use. |
-| `ls /usr/share/nmap/scripts/* | grep ftp` | Search nmap scripts for keywords. |
+| `ls /usr/share/nmap/scripts/*`  | grep ftp` | Search nmap scripts for keywords. |
   
 | Command                     | Description                                            |
 |-----------------------------|--------------------------------------------------------|
