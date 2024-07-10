@@ -208,19 +208,21 @@ Gobuster is an open source directory and subdomain enumeration tool used to disc
 | `gobuster dns -d example.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt` | Enumerating subdomains by adding a DNS server like 1.1.1.1 to /etc/resolv.conf. |
 | `gobuster dir -u example.com -w /usr/share/dirb/wordlists/directory-list-2.3-medium.txt -f -e` | Returning only requests with positive status codes on example.com.  |
 
+🔍 Auxilary Metasploit Modules
+---------------------------------------------------------------------------------
+| Command                                | Description                              |
+---------------------------------------------------------------------------------
+| use auxiliary/scanner/http/dir_scanner  | Metasploit HTTP directory scanner         |
+---------------------------------------------------------------------------------
+| use auxiliary/scanner/http/jboss_vulnscan | Metasploit JBOSS vulnerability scanner  |
+---------------------------------------------------------------------------------
+| use auxiliary/scanner/mssql/mssql_login | Metasploit MSSQL Credential Scanner       |
+---------------------------------------------------------------------------------
+| use auxiliary/scanner/mysql/mysql_version | Metasploit MySQL Version Scanner        |
+---------------------------------------------------------------------------------
+| use auxiliary/scanner/oracle/oracle_login | Metasploit Oracle Login Module          |
+---------------------------------------------------------------------------------
 
-​​### 🔥 ​Exploit Research
-
-Compiling Exploits
---------------------------------------------------------------------------------
-| Header Files                                      | OS     |
---------------------------------------------------------------------------------
-| process.h, string.h, winbase.h, windows.h,         | Windows |
-| winsock2.h                                         |         |
---------------------------------------------------------------------------------
-| arpa/inet.h, fcntl.h, netdb.h, netinet/in.h,      | Linux   |
-| sys/sockt.h, sys/types.h, unistd.h                 |         |
---------------------------------------------------------------------------------
 
 
 
